@@ -60,3 +60,7 @@ npm run lint
 
 ### Atomic design
 - Refer: https://atomicdesign.bradfrost.com/
+
+### Known issues:
+- Storybook cannot load css/scss style
+- Only have unit test for atom components
