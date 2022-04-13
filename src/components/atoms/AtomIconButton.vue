@@ -13,6 +13,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  name: "AtomIconButton",
   props: {
     type: { type: String, default: "primary" },
     isOutline: { type: Boolean, default: false },

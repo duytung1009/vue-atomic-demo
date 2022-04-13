@@ -8,6 +8,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  name: "AtomCard",
   setup() {
     return {};
   },

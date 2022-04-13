@@ -6,6 +6,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  name: "AtomTextBody",
   props: {
     value: { type: String },
   },

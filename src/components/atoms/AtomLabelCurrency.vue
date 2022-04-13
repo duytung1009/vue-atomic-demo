@@ -8,6 +8,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  name: "AtomLabelCurrency",
   props: {
     value: { type: Number },
     size: { type: String, default: "MEDIUM" },

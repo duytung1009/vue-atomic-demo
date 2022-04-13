@@ -10,6 +10,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  name: "AtomImage",
   props: {
     src: { type: String },
     aspectRatio: { type: Number, default: 16 / 9 },
