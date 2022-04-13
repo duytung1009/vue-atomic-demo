@@ -1,6 +1,6 @@
 # vue-atomic-boilerplate
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a demostration project using Vue 3 + Vite.
 
 ## Recommended IDE Setup
 
