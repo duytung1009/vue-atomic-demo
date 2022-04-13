@@ -1,5 +1,9 @@
 <template>
-  <img :src="src" class="rounded-3 w-100 img-container" />
+  <img
+    :src="src"
+    class="rounded-3 w-100 img-container"
+    :style="{ 'aspect-ratio': aspectRatio }"
+  />
 </template>
 
 <script lang="ts">
@@ -8,6 +12,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   props: {
     src: { type: String },
+    aspectRatio: { type: Number, default: 16 / 9 },
   },
   setup() {
     return {};
@@ -17,7 +22,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .img-container {
-  aspect-ratio: 16 / 9;
   object-fit: contain;
   background-color: $black;
 }

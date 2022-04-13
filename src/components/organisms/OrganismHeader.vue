@@ -1,15 +1,27 @@
 <template>
-  <header
-    class="absolute inset-x-0 text-gray-100 py-4 flex flex-wrap items-center"
-  >
-    <div
-      class="w-full md:w-3/4 px-4 pb-4 md:pb-0 flex items-center justify-between"
-    >
-      <AtomLogo />
-    </div>
-    <div class="w-full md:w-1/4 px-4">
-      <AtomButton label="Home" @click="goToHomePage" />
-      <AtomButton label="Cart" @click="goToCartPage" />
+  <header>
+    <div class="w-100 px-6 py-3 bg-dark text-white">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-between"
+        >
+          <AtomLogo />
+          <div class="d-flex gap-3">
+            <AtomButton type="light" :isOutline="true" @click="goToHomePage">
+              <div class="d-flex align-items-center gap-1">
+                <BIconHouse></BIconHouse>
+                <AtomText value="Home" size="SMALL" />
+              </div>
+            </AtomButton>
+            <AtomButton type="light" :isOutline="true" @click="goToCartPage">
+              <div class="d-flex align-items-center gap-1">
+                <BIconCart></BIconCart>
+                <AtomText value="Cart" size="SMALL" />
+              </div>
+            </AtomButton>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -19,13 +31,13 @@ import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
 import AtomLogo from "@/components/atoms/AtomLogo.vue";
 import AtomButton from "@/components/atoms/AtomButton.vue";
-// import MoleculeLinks from "@/components/atoms/MoleculeLinks";
+import AtomText from "@/components/atoms/AtomText.vue";
 
 export default defineComponent({
   components: {
     AtomLogo,
     AtomButton,
-    // MoleculeLinks,
+    AtomText,
   },
   setup() {
     const router = useRouter();

@@ -1,14 +1,8 @@
 <template>
-  <div class="container">
+  <div>
     <div class="row">
-      <div class="col px-5">
-        <MoleculeProductCard :id="'1'" />
-      </div>
-      <div class="col px-5">
-        <MoleculeProductCard :id="'2'" />
-      </div>
-      <div class="col px-5">
-        <MoleculeProductCard :id="'3'" />
+      <div class="col-4 px-5" v-for="product in listProduct" :key="product.id">
+        <MoleculeProductCard :item="product" />
       </div>
     </div>
   </div>
@@ -17,13 +11,17 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import MoleculeProductCard from "@/components/molecules/MoleculeProductCard.vue";
+import { useProductStore } from "@/stores/product";
 
 export default defineComponent({
   components: {
     MoleculeProductCard,
   },
   setup() {
-    return {};
+    const productStore = useProductStore();
+    return {
+      listProduct: productStore.listProduct,
+    };
   },
 });
 </script>

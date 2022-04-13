@@ -1,5 +1,5 @@
 <template>
-  <span class="fs-5 fw-normal">{{ value }}</span>
+  <span class="fs-6 fw-normal">{{ value }}</span>
 </template>
 
 <script lang="ts">

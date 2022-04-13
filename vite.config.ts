@@ -14,7 +14,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/assets/_boostrap.scss";`,
+        additionalData: `@import "@/assets/_boostrap.scss";\n@import "@/assets/_custom.scss";`,
       },
     },
   },

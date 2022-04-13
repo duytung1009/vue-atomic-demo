@@ -1,6 +1,8 @@
 <template>
   <OrganismHeader />
-  <router-view />
+  <div class="container-xl p-5">
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts">

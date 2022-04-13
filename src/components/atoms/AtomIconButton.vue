@@ -1,6 +1,6 @@
 <template>
   <button
-    class="btn rounded-3"
+    class="btn btn-circle"
     :class="getClass()"
     :disabled="disabled"
     @click="onClick"
@@ -34,12 +34,12 @@ export default defineComponent({
         // Size
         switch (props.size) {
           case "SMALL":
-            results.push("btn-sm");
             break;
           case "MEDIUM":
+            results.push("btn-lg");
             break;
           case "LARGE":
-            results.push("btn-lg");
+            results.push("btn-xl");
             break;
         }
         return results.join(" ");

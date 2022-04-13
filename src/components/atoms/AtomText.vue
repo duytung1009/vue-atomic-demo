@@ -1,7 +1,5 @@
 <template>
-  <span class="text-currency fw-normal" :class="getClassSize(size)">
-    {{ formatCurrency(value) }}
-  </span>
+  <span class="fw-normal" :class="getClassSize(size)">{{ value }}</span>
 </template>
 
 <script lang="ts">
@@ -9,17 +7,11 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
-    value: { type: Number },
+    value: { type: String },
     size: { type: String, default: "MEDIUM" },
   },
   setup() {
     return {
-      formatCurrency: (price: number) => {
-        return price?.toLocaleString("en-US", {
-          style: "currency",
-          currency: "USD",
-        });
-      },
       getClassSize: (size: string) => {
         switch (size) {
           case "SMALL":
@@ -34,9 +26,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss" scoped>
-.text-currency {
-  color: $green;
-}
-</style>

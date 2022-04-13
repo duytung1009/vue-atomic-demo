@@ -30,7 +30,6 @@ import HelloWorld from "@/components/HelloWorld.vue";
 <style lang="scss">
 header {
   line-height: 1.5;
-  max-height: 100vh;
 }
 
 .logo {
@@ -80,12 +79,6 @@ nav a:first-of-type {
   body {
     display: flex;
     place-items: center;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   header .wrapper {
